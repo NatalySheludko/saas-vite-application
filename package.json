@@ -1,11 +1,11 @@
 {
-  "name": "vite-sass-app-template",
+  "name": "sass-vite-application",
   "private": true,
   "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/vite-sass-app-template/",
+    "build": "vite build --base=/sass-vite-application/",
     "preview": "vite preview",
     "watch": "npx vite build --watch"
   },
@@ -25,3 +25,4 @@
     "vite-plugin-image-optimizer": "^1.1.7"
   }
 }
+
