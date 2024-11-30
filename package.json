@@ -1,5 +1,5 @@
 {
-  "name": "sass-vite-application",
+  "name": "vite-sass-app-template",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -23,6 +23,10 @@
     "svgo": "^3.0.2",
     "vite": "^4.4.5",
     "vite-plugin-image-optimizer": "^1.1.7"
+  },
+  "dependencies": {
+    "body-scroll-lock": "^4.0.0-beta.0",
+    "browserslist": "^4.24.2",
+    "caniuse-lite": "^1.0.30001684"
   }
 }
-
