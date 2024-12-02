@@ -3,14 +3,6 @@
 @use '../../utils/functions' as fn;
 @use '../../utils/mixins' as mx;
 
-.companies {
-  padding-top: 16px;
-
-  @include mx.mq('lg') {
-    padding-top: 36px;
-  }
-}
-
 .companies-page-title {
   @extend %section-title;
 
