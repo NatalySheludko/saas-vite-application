@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 export default defineConfig({
-  base: '/saas-vite-application/',
+  base: '/',
   plugins: [
     ViteImageOptimizer({
       png: {
@@ -28,21 +28,28 @@ export default defineConfig({
       apply: 'serve',
     },
   ],
+  // build: {
+  //   minify: false, // disable minification
+  //   rollupOptions: {
+  //     input: Object.fromEntries(
+  //       glob
+  //         .sync(['./*.html', './pages/**/*.html'])
+  //         .map(file => [
+  //           path.relative(
+  //             __dirname,
+  //             file.slice(0, file.length - path.extname(file).length)
+  //           ),
+  //           fileURLToPath(new URL(file, import.meta.url)),
+  //         ])
+  //     ),
+  //     // output unminified CSS file
+  //     output: {
+  //       assetFileNames: 'assets/[name].[ext]',
+  //     },
+  //   },
+  // },
   build: {
-    minify: false, // disable minification
     rollupOptions: {
-      input: Object.fromEntries(
-        glob
-          .sync(['./*.html', './pages/**/*.html'])
-          .map(file => [
-            path.relative(
-              __dirname,
-              file.slice(0, file.length - path.extname(file).length)
-            ),
-            fileURLToPath(new URL(file, import.meta.url)),
-          ])
-      ),
-      // output unminified CSS file
       output: {
         assetFileNames: 'assets/[name].[ext]',
       },
