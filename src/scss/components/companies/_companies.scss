@@ -1,0 +1,93 @@
+@use '../../utils/placeholders';
+@use '../../utils/variables' as var;
+@use '../../utils/functions' as fn;
+@use '../../utils/mixins' as mx;
+
+.companies {
+  padding-top: 16px;
+
+  @include mx.mq('lg') {
+    padding-top: 36px;
+  }
+}
+
+.companies-page-title {
+  @extend %section-title;
+
+  display: block;
+  margin-bottom: 8px;
+
+  color: fn.get-color('light-primary');
+
+  @include mx.mq('lg') {
+    width: 342px;
+    margin-bottom: 18px;
+  }
+}
+
+.companies-details {
+  @extend %main-text;
+
+  margin-bottom: 36px;
+  color: fn.get-color('light-secondary');
+
+  @include mx.mq('lg') {
+    margin-bottom: 40px;
+  }
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include mx.mq('md') {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.company-item {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  max-height: 196px;
+  padding: 24px;
+
+  border-radius: 24px;
+  background-color: fn.get-color('dark-tertiary');
+
+  @include mx.mq('md') {
+    width: calc((100% - 20px) / 2);
+  }
+
+  @include mx.mq('lg') {
+    width: calc((100% - 40px) / 3);
+  }
+}
+
+.company-caption {
+  @extend %accent-text;
+
+  margin-bottom: 18px;
+  color: fn.get-color('light');
+}
+
+.location {
+  @extend %main-text;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 32px;
+}
+
+.companies-btn {
+  @extend %details;
+
+  color: fn.get-color('accent-primary');
+
+  border-color: fn.get-color('accent-primary');
+  border-radius: 12px;
+}
