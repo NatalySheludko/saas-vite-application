@@ -268,3 +268,56 @@ window.matchMedia("(min-width: 1200px)").addEventListener("change", (event) => {
   refsMenu.openMenuBtn.setAttribute("aria-expanded", false);
   enableBodyScroll(document.body);
 });
+const elements = {
+  menuLinks: document.querySelectorAll(".menu-link"),
+  overviewSections: document.querySelectorAll(".overview"),
+  companiesSection: document.querySelector(".companies"),
+  overviewsSidebarItem: document.querySelector(".sidebar-overview"),
+  companiesSidebarItem: document.querySelector(".sidebar-companies"),
+  mainElement: document.querySelector(".main")
+};
+function removeCurrentClass() {
+  elements.menuLinks.forEach((link) => {
+    link.classList.remove("current");
+  });
+}
+function setActiveLink(link) {
+  removeCurrentClass();
+  link.classList.add("current");
+}
+function showOverview() {
+  if (elements.companiesSection) {
+    elements.companiesSection.classList.add("visually-hidden");
+  }
+  elements.overviewSections.forEach((section) => {
+    section.classList.remove("visually-hidden");
+  });
+  if (elements.mainElement) {
+    elements.mainElement.style.display = "grid";
+  }
+}
+function showCompanies() {
+  elements.overviewSections.forEach((section) => {
+    section.classList.add("visually-hidden");
+  });
+  if (elements.companiesSection) {
+    elements.companiesSection.classList.remove("visually-hidden");
+  }
+  if (elements.mainElement) {
+    elements.mainElement.style.display = "block";
+  }
+}
+elements.overviewsSidebarItem.addEventListener("click", (event) => {
+  event.preventDefault();
+  showOverview();
+  setActiveLink(event.currentTarget.querySelector(".menu-link"));
+});
+elements.companiesSidebarItem.addEventListener("click", (event) => {
+  event.preventDefault();
+  showCompanies();
+  setActiveLink(event.currentTarget.querySelector(".menu-link"));
+});
+document.addEventListener("DOMContentLoaded", () => {
+  showOverview();
+  setActiveLink(elements.overviewsSidebarItem.querySelector(".menu-link"));
+});
