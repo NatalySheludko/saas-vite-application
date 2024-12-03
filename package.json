@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/sass-vite-application/",
+    "build": "vite build --base=/",
     "preview": "vite preview",
     "watch": "npx vite build --watch",
     "deploy": "gh-pages -d dist"
