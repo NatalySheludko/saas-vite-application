@@ -7,6 +7,7 @@ import { fileURLToPath } from 'url';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 export default defineConfig({
+  base: '/sass-vite-application/',
   plugins: [
     ViteImageOptimizer({
       png: {
@@ -28,6 +29,7 @@ export default defineConfig({
     },
   ],
   build: {
+    outDir: 'dist',
     minify: false, // disable minification
     rollupOptions: {
       input: Object.fromEntries(
