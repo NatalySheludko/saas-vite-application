@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build --base=/sass-vite-application/",
     "preview": "vite preview",
-    "watch": "npx vite build --watch"
+    "watch": "npx vite build --watch",
+    "deploy": "gh-pages -d dist"
   },
   "browserslist": [
     "cover 99.5%"
@@ -15,6 +16,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.4",
     "fast-glob": "^3.3.1",
+    "gh-pages": "^6.2.0",
     "imagemin": "^8.0.1",
     "imagemin-webp": "^8.0.0",
     "postcss-sort-media-queries": "^5.2.0",
@@ -22,7 +24,8 @@
     "sharp": "^0.32.6",
     "svgo": "^3.0.2",
     "vite": "^4.4.5",
-    "vite-plugin-image-optimizer": "^1.1.7"
+    "vite-plugin-image-optimizer": "^1.1.7",
+    "vite-plugin-imagemin": "^0.6.1"
   },
   "dependencies": {
     "body-scroll-lock": "^4.0.0-beta.0",
