@@ -3,6 +3,7 @@ import viteImagemin from 'vite-plugin-imagemin';
 import path from 'path';
 
 export default defineConfig({
+  base: '/your-repository-name/',
   plugins: [
     viteImagemin({
       gifsicle: { optimizationLevel: 7 },
