@@ -17,10 +17,9 @@ export default defineConfig({
         main: path.resolve(__dirname, 'index.html'),
       },
       output: {
-        assetFileNames: assetInfo => {
-          if (assetInfo.name === 'style.css') return 'css/style.css';
-          return 'assets/[name].[ext]';
-        },
+        entryFileNames: '[name].js',
+        chunkFileNames: '[name].js',
+        assetFileNames: '[name].[ext]',
       },
     },
   },
