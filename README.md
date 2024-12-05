@@ -18,16 +18,16 @@ Users can switch between different functionalities directly from the sidebar.
 - Implementation
 The sidebar toggle functionality is implemented with JavaScript and is styled using SaaS for a smooth and consistent look across devices.
 
-4. **Fast Build Tool**
+3. **Fast Build Tool**
 Developed using Vite for a fast development experience and optimized builds.
 
-5. **Prettier Integration**
+4. **Prettier Integration**
 Ensures code consistency and readability with Prettier.
 
-6. **Deployment**
+5. **Deployment**
 Hosted and deployed on **Vercel** for high performance and scalability.
 
-7. **JavaScript-Based**
+6. **JavaScript-Based**
 The application logic and interactivity are implemented using JavaScript.
 
 ### Technical Stack
