@@ -66,5 +66,5 @@ The application logic and interactivity are implemented using JavaScript.
    http://localhost:5173
    ```
 
-**License**
+### License
 This project is licensed under the MIT License.
